@@ -570,12 +570,12 @@ allcmd = ["play", "current", "playlist", "song", f"song@{USERNAME}", f"play@{USE
 async def not_chat(_, m: Message):
     buttons = [
             [
-                InlineKeyboardButton("CHANNEL", url="https://t.me/AsmSafone"),
-                InlineKeyboardButton("SUPPORT", url="https://t.me/SafoTheBot"),
+                InlineKeyboardButton("🦋 CHANNEL 🦋", url="https://t.me/MarineBots"),
+                InlineKeyboardButton("🦋 SUPPORT 🦋", url="https://t.me/MarineChats"),
             ],
             [
-                InlineKeyboardButton("🤖 MAKE YOUR OWN BOT 🤖", url="https://heroku.com/deploy?template=https://github.com/AsmSafone/RadioPlayerV3"),
+                InlineKeyboardButton("🦋 CREATOR 🦋", url="https://t.me/AidanNia"),
             ]
          ]
-    k=await m.reply_photo(photo="https://telegra.ph/file/4e839766d45935998e9c6.jpg", caption="**Sorry, You Can't Use This Bot In This Group! 🤷‍♂️ But You Can Make Your Own Bot Like This From The [Source Code](https://github.com/AsmSafone/RadioPlayerV3) Below 😉!**", reply_markup=InlineKeyboardMarkup(buttons))
+    k=await m.reply_photo(photo="https://telegra.ph/file/bea91b4f8ac94f4c3fce5.jpg", caption="**Sorry, You Can't Use This Bot In This Group! 🤷‍♂️ Contact my [owner](https://t.me/xZionBot) to make your own bot 😉!**", reply_markup=InlineKeyboardMarkup(buttons))
     await mp.delete(m)
