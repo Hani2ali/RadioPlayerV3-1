@@ -54,7 +54,7 @@ def stop_and_restart():
 
 bot.run(main())
 bot.start()
-print("\n\nRadio Player Bot Started, Join @AsmSafone!")
+print("\n\nRadio Player Bot Started, Join @MarineChats!")
 bot.send(
     functions.bots.SetBotCommands(
         commands=[
@@ -150,7 +150,7 @@ async def restart(client, message):
     await sleep(5)
     await k.edit("🔄 **Successfully Updated!**")
     await sleep(2)
-    await k.edit("🔄 **Now Restarting ...\n\nJoin @AsmSafone For Updates!**")
+    await k.edit("🔄 **Now Restarting ...\n\nJoin @MarineBots For Updates!**")
     try:
         await message.delete()
     except:
@@ -175,4 +175,4 @@ async def restart(client, message):
 
 idle()
 bot.stop()
-print("\n\nRadio Player Bot Stopped, Join @AsmSafone!")
+print("\n\nRadio Player Bot Stopped, Join @MarineChats!")
