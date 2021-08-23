@@ -27,10 +27,10 @@ CHAT=Config.CHAT
 ADMINS=Config.ADMINS
 playlist=Config.playlist
 
-HOME_TEXT = "👋🏻 **Hi [{}](tg://user?id={})**,\n\nI'm **Radio Player V3.0** \nI Can Play Radio / Music / YouTube Live In Channel & Group 24x7 Nonstop. Made with ❤️ By @AsmSafone 😉!"
+HOME_TEXT = "👋🏻 **Hi [{}](tg://user?id={})**,\n\nI'm **Radio Player V3.0** \nI Can Play Radio / Music / YouTube Live In Channel & Group 24x7 Nonstop. Made with ❤️ By @AidanNia 😉!"
 HELP_TEXT = """
 🎧 --**Need Help ?**--
-(Join @SafoTheBot For Support)
+(Join @MarineChats For Support)
 
 🏷️ --**Common Commands**-- :
 
@@ -58,7 +58,7 @@ HELP_TEXT = """
 \u2022 `/restart` - update & restart the bot
 
 © **Powered By** : 
-**@AsmSafone | @SafoTheBot** 👑
+**@MarineBots | @MarineChats** 👑
 """
 
 
@@ -170,12 +170,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="help":
         buttons = [
             [
-                InlineKeyboardButton("CHANNEL", url="https://t.me/AsmSafone"),
-                InlineKeyboardButton("SUPPORT", url="https://t.me/SafoTheBot"),
+                InlineKeyboardButton("🦋 CHANNEL 🦋", url="https://t.me/MarineChats"),
+                InlineKeyboardButton("🦋 SUPPORT 🦋", url="https://t.me/MarineBots"),
             ],
             [
-                InlineKeyboardButton("MORE BOTS", url="https://t.me/AsmSafone/173"),
-                InlineKeyboardButton("SOURCE CODE", url="https://github.com/AsmSafone/RadioPlayerV3"),
+                InlineKeyboardButton("🦋 CREATOR 🦋", url="https://t.me/AidanNia"),
+                InlineKeyboardButton("🦋 CO-DEV 🦋", url="https://t.me/avicz"),
             ],
             [
                 InlineKeyboardButton("CLOSE 🔐", callback_data="close"),
@@ -196,20 +196,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
 async def start(client, message):
     buttons = [
             [
-                InlineKeyboardButton("CHANNEL", url="https://t.me/AsmSafone"),
-                InlineKeyboardButton("SUPPORT", url="https://t.me/SafoTheBot"),
+                InlineKeyboardButton("🦋 CHANNEL 🦋", url="https://t.me/MarineBots"),
+                InlineKeyboardButton("🦋 SUPPORT 🦋", url="https://t.me/MarineChats"),
             ],
             [
-                InlineKeyboardButton("MORE BOTS", url="https://t.me/AsmSafone/173"),
-                InlineKeyboardButton("SOURCE CODE", url="https://github.com/AsmSafone/RadioPlayerV3"),
+                InlineKeyboardButton("🦋 DEVELOPER 🦋", url="https://t.me/AidanNia"),
+                InlineKeyboardButton("🦋 CO-DEV 🦋", url="https://t.me/avicz"),
             ],
             [
                 InlineKeyboardButton("❔ HOW TO USE ❔", callback_data="help"),
             ]
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
-    m=await message.reply_photo(photo="https://telegra.ph/file/4e839766d45935998e9c6.jpg", caption=HOME_TEXT.format(message.from_user.first_name, message.from_user.id), reply_markup=reply_markup)
-    await mp.delete(m)
+    m=await message.reply_photo(photo="https://telegra.ph/file/bea91b4f8ac94f4c3fce5.jpg", caption=HOME_TEXT.format(message.from_user.first_name, message.from_user.id), reply_markup=reply_markup)
+    await mp.delete(message)
     await mp.delete(message)
 
 
@@ -234,4 +234,3 @@ async def help(client, message):
         await msg['help'].delete()
     msg['help'] = await message.reply_photo(photo="https://telegra.ph/file/4e839766d45935998e9c6.jpg", caption=HELP_TEXT, reply_markup=reply_markup)
     await mp.delete(message)
-
